@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Flag!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="principal">
+        <div id="inicio">
+            <a href="inicio.html" id="logo"> <p id="p1">Guess the Flag!</p> </a>
+            <input type="image" src="imagens/globo.png" width="300" id="intro">
+        </div>
+        <div id="dificuldades">
+            <p id="p2">Escolha uma dificuldade</p>
+            <input type="button" value="Fácil" width="72" height="72" onclick="set_dificuldade('Fácil')" id="facil" class="botaod">
+            <input type="button" value="Normal" width="72" height="72" onclick="set_dificuldade('Normal')" id="normal" class="botaod">
+            <br>
+            <input type="button" value="Médio" width="72" height="72" onclick="set_dificuldade('Médio')" id="medio" class="botaod">
+            <input type="button" value="Difícil" width="72" height="72" onclick="set_dificuldade('Difícil')" id="dificil" class="botaod">
+            <br>
+            <input type="button" value="MUITO Difícil" width="72" height="72" onclick="set_dificuldade('MUITO Difícil')" id="MUITOdificil" class="botaod">
+            <input type="button" value="TODAS Bandeiras!" width="72" height="72" onclick="set_dificuldade('TODAS')" id="todas" class="botaod">
+        </div>
+    </section>
+    
+    <footer>
+        <a href="https://www.bandeirasnacionais.com/" id="flagsite"><img alt="Bandeiras de países" src="https://www.bandeirasnacionais.com/ico.gif" width="88" height="31" /></a>
+        <span id="rusbe">rusbéIndustries&copy;  <img src="imagens/rusbé.jpeg" alt=""></span>
+    </footer>
+
+    <script src="script_dificuldade.js"></script>
+</body>
+
+</html>

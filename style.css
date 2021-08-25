@@ -1,0 +1,264 @@
+html {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("imagens/mapa.jpg");
+    background-size: cover;
+    color: #DEB887;
+    font: normal 20pt Arial;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    background-color: rgba(245, 245, 220, 0.966);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.753);
+    text-align: center;
+    color: rgba(0, 0, 0, 0.877);
+}
+
+#logo {
+    font: bolder 30px Arial;
+    -webkit-text-stroke-width: 3px;
+    /* largura da borda */
+    -webkit-text-stroke-color: #deb88767;
+    /* cor da borda */
+    color: #f0f1d9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.753);
+}
+
+.principal {
+    padding: 20px;
+    margin: auto;
+}
+
+input {
+    background: #f0dda9;
+    color: black;
+    font: bold 15pt Arial;
+    font-stretch: normal;
+    white-space: normal;
+    overflow: hidden;
+    /* "overflow" value must be different from "visible" */
+    text-overflow: ellipsis;
+    /*margin-top: 50px;*/
+    border-radius: 14px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.493);
+}
+
+@media screen and (max-device-width: 350px) {
+    .botao {
+        margin: 10px;
+    }
+}
+
+@media screen and (max-device-width: 700px) and (min-device-width: 350px) {
+    .botao {
+        height: 30px;
+        width: 300px;
+        margin: 10px;
+    }
+    .botaod {
+        margin: 10px;
+        width: 130px;
+    }
+    body {
+        margin: 0px;
+        width: 100vw;
+        height: 100vh;
+    }
+    section {
+        height: 700px;
+    }
+    /*#p1, span {
+        background-color: rgb(245, 245, 220);
+    }*/
+    div#img {
+        height: 250px;
+        margin: 40px;
+        /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.493);*/
+    }
+    .bandeira {
+        max-height: 220px;
+    }
+    #p4 {
+        font-size: 14px;
+        float: left;
+    }
+}
+
+@media screen and (min-device-width: 700px) {
+    .principal {
+        width: 700px;
+        height: 800px;
+        margin-top: 40px;
+        background-color: rgba(245, 245, 220, 0.966);
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.753);
+    }
+    .botao {
+        height: 50px;
+        width: 300px;
+        margin: 20px;
+    }
+    .botaod {
+        height: 50px;
+        width: 200px;
+        margin: 30px;
+    }
+    div#img {
+        height: 250px;
+        margin: 100px;
+        /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.493);*/
+    }
+    .bandeira {
+        max-height: 240px;
+    }
+    #p4 {
+        float: left;
+        font: bolder 20px Arial;
+    }
+}
+
+/*
+#opcoes {
+    margin-top: 80px;
+}*/
+
+#res {
+    float: left;
+}
+
+#dificuldade {
+    float: right;
+}
+
+#p4, #p1 {
+    background-color: #f0dda9;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    -webkit-text-stroke-width: 3px;
+    /* largura da borda */
+    -webkit-text-stroke-color: #0000002f;
+    /* cor da borda */
+    color: #0051ff;
+}
+
+#p1 {
+    font: bolder 40px  Arial;
+    float: left;
+}
+
+#p2 {
+    padding: 10px;
+}
+
+.botaor {
+    font-weight: bolder;
+}
+
+#facil {
+    background-color: rgba(44, 145, 228, 0.377);
+    color: blue;
+}
+
+#normal {
+    background-color: rgba(47, 212, 32, 0.37);
+    color: green;
+}
+
+#medio {
+    background-color: rgba(231, 199, 18, 0.308);
+    color: orange;
+}
+
+#dificil {
+    background-color: rgba(233, 13, 13, 0.377);
+    color: red;
+}
+
+#MUITOdificil {
+    background-color: darkred;
+    font: bolder 15pt Arial;
+    color: black;
+}
+
+#todas {
+    background-color: rgb(102, 5, 102);
+    font: bolder 15pt Arial;
+    color: rgb(255, 255, 255);
+}
+
+.botao, .botaod {
+    border-color: rgba(255, 255, 255, 0.089);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.botao:hover, .botaod:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.bandeira {
+    transform: scale(1);
+    animation: float 5s ease-in-out infinite;
+    max-width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    width: auto;
+    height: auto;
+}
+
+#acertos {
+    background-color: greenyellow;
+}
+
+#erros {
+    background-color: red;
+}
+
+#acertos, #erros {
+    font: bold 20px Arial;
+    border-radius: 8px;
+    padding: 6px;
+    margin: 10px;
+}
+
+@keyframes float {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+footer {
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.541);
+    color: rgb(0, 0, 0);
+    font: bolder 10pt Arial;
+    /*width: 100%;*/
+    height: 30px;
+    margin: 10px;
+    bottom: 0;
+    /*position: fixed;*/
+    /*deixar fixo na tela*/
+}
+
+#flagsite {
+    float: left;
+}
+
+#rusbe {
+    float: right;
+    margin-right: 20px;
+    background-color: rgba(255, 255, 255, 0.527);
+}

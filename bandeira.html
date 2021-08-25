@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Flag!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="principal">
+        <span id="res"></span> <span id="dificuldade"></span><br>
+        <p><span id="acertos">Acertos: </span><span id="erros">Erros: </span></p>
+        <p id="p3"></p>
+        <a href="inicio.html" class="botaor"> <p style="display: none;" id="recomecar">Recomeçar</p> </a>
+        <div id="img">
+            <input type="image" src="imagens/transparente.png" width="300" id="bandeira" class="bandeira">
+            <p id="p2"></p>
+        </div>
+        <div id="opcoes">
+            <input type="button" value="opcao1" width="72" height="72" onclick="selecionar(0)" id="opcao1" class="botao">
+            <input type="button" value="opcao2" width="72" height="72" onclick="selecionar(1)" id="opcao2" class="botao">
+            <br>
+            <input type="button" value="opcao3" width="72" height="72" onclick="selecionar(2)" id="opcao3" class="botao">
+            <input type="button" value="opcao4" width="72" height="72" onclick="selecionar(3)" id="opcao4" class="botao">
+        </div><br>
+        <div id="inicio">
+            <a href="inicio.html" id="logo"> <p id="p4">Voltar</p> </a>
+        </div>
+    </section>
+    
+    <footer>
+        <a href="https://www.bandeirasnacionais.com/" id="flagsite"><img alt="Bandeiras de países" src="https://www.bandeirasnacionais.com/ico.gif" width="88" height="31" /></a>
+        <span id="rusbe">rusbéIndustries&copy;  <img src="imagens/rusbé.jpeg" alt=""></span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
