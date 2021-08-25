@@ -60,14 +60,12 @@ input {
         padding: 8px;
         height: auto;
     }
-    .botao {
-        height: 30px;
-        width: 200px;
+    .botao, .botaod{
+        position: relative;
+        vertical-align:top;
+        height: 80px;
+        width: 150px;
         margin: 10px;
-    }
-    .botaod {
-        margin: 10px;
-        width: 130px;
     }
     section {
         height: 700px;
@@ -116,13 +114,17 @@ input {
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.753);
     }
     .botao {
-        height: 50px;
-        width: 300px;
-        margin: 20px;
+        position: relative;
+        vertical-align:top;
+        height: 80px;
+        width: 200px;
+        margin: 10px;
     }
     .botaod {
-        height: 50px;
-        width: 200px;
+        position: relative;
+        vertical-align:top;
+        height: 80px;
+        width: 250px;
         margin: 30px;
     }
     div#img {
