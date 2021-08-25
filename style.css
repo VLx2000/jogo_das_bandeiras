@@ -89,6 +89,9 @@ input {
         font-size: 14px;
         float: left;
     }
+    #p1 {
+        float: center;
+    }
 }
 
 @media screen and (min-device-width: 700px) {
@@ -122,6 +125,9 @@ input {
         float: left;
         font: bolder 20px Arial;
     }
+    #p1 {
+        float: left;
+    }
 }
 
 /*
@@ -151,7 +157,6 @@ input {
 
 #p1 {
     font: bolder 40px Arial;
-    float: left;
 }
 
 #p2 {
