@@ -363,12 +363,12 @@ function jogo() {
         botoes[2].style = 'display: none'
         botoes[3].style = 'display: none'
         p2.innerHTML = `<strong>FIM DE JOGO!</strong><br>Você acertou <strong>${pontuacao} de ${NUMERO_RODADAS}</strong> bandeiras <br> na dificuldade <strong>${dificuldade_cor}</strong>`
-        recomecar.style = 'display: block'
+        recomecar.style = 'display: block;'
         bandeira.src = 'imagens/mapa.png'
         bandeira.style = 'box-shadow: 0px 0px 0px white; background-color: transparent; margin: auto;'
         window.document.getElementById('res').style = 'display: none'
         window.document.getElementById('dificuldade').style = 'display: none'
-        window.document.querySelector('h1').innerHTML = 'Guess the Flag'
+        window.document.getElementById('p4').style = 'display: none'
         return 0
     }
     limpar_usados()
