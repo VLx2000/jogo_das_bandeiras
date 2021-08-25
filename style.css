@@ -6,7 +6,6 @@ html {
 
 body {
     background: url("imagens/mapa.jpg");
-    background-size: cover;
     color: #DEB887;
     font: normal 20pt Arial;
     margin: 0;
@@ -53,10 +52,17 @@ input {
 @media screen and (max-device-width: 350px) {
     .botao {
         margin: 10px;
-    }
+    }    
 }
 
-@media screen and (max-device-width: 700px) and (min-device-width: 350px) {
+@media screen and (max-device-width: 700px) {
+    body{
+        background-size: 400%;
+    }
+    .principal {
+        background-color: rgba(245, 245, 220, 0);
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.753);
+    }
     .botao {
         height: 30px;
         width: 300px;
@@ -65,11 +71,6 @@ input {
     .botaod {
         margin: 10px;
         width: 130px;
-    }
-    body {
-        margin: 0px;
-        width: 100vw;
-        height: 100vh;
     }
     section {
         height: 700px;
@@ -88,13 +89,27 @@ input {
     #p4 {
         font-size: 14px;
         float: left;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.493);
+    }
+    #p2 {
+        background-color: #f0dda9;
+        border-radius: 20px;
     }
     #p1 {
         float: center;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.493);
+    }
+    #dificuldades {
+        background-color: #f0dda9;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.493);
     }
 }
 
 @media screen and (min-device-width: 700px) {
+    body{
+        background-size: 200%;
+    }
     .principal {
         width: 700px;
         height: 800px;
@@ -124,9 +139,11 @@ input {
     #p4 {
         float: left;
         font: bolder 20px Arial;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.493);
     }
     #p1 {
         float: left;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.493);
     }
 }
 

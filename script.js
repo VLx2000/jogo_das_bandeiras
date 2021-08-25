@@ -362,6 +362,7 @@ function jogo() {
         botoes[1].style = 'display: none'
         botoes[2].style = 'display: none'
         botoes[3].style = 'display: none'
+        p2.style = 'display: block;'
         p2.innerHTML = `<strong>FIM DE JOGO!</strong><br>Você acertou <strong>${pontuacao} de ${NUMERO_RODADAS}</strong> bandeiras <br> na dificuldade <strong>${dificuldade_cor}</strong>`
         recomecar.style = 'display: block;'
         bandeira.src = 'imagens/mapa.png'
