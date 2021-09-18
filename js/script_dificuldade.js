@@ -18,5 +18,5 @@ function set_dificuldade(level) {
 
     localStorage.setItem("level", level);
     localStorage.setItem("cor", cor);
-    window.location.href = 'bandeira.html'
+    window.location.href = 'html/bandeira.html'
 }
