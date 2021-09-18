@@ -1,9 +1,9 @@
-# jogo_das_bandeiras
+# jogo_das_bandeiras (Guess the Flag)
 
 ### O que é? ###
 
 Jogo de descobrir qual país possui determinada bandeira.
-Feito em Javascript.
+Feito em JavaScript.
 
 ### Para jogar: ###
 
