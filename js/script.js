@@ -1,16 +1,12 @@
-let bandeira = window.document.getElementById('bandeira')
-let p2 = window.document.getElementById('p2')
 let cont = 1
 let pontuacao = 0
 let n_sorteado = []
 let paises_escolhidos = []
 let bandeiras_escolhidas = []
-let aux_bandeiras
+let aux_bandeiras = []
 let string_caminho
 let NUMERO_RODADAS
 var resposta
-var dificuldade
-var dificuldade_cor
 
 var bandeiras_MUITO_dificil = [
     "ag.png",  "bl.png",  "cg.png",  "gs.png",  "li.png",  "mo.png",  "nc.png",  "sb.png",  "tc.png",  
@@ -71,12 +67,10 @@ var botoes = [  window.document.getElementById('opcao1'),
 
 function inicia_jogo() {
     // Obter
-    dificuldade = localStorage.getItem("level");
-    dificuldade_cor = localStorage.getItem("cor");
-    getDificuldade()
+    getDificuldade(localStorage.getItem("level"))
     
     window.document.getElementById('res').innerHTML = `<strong><font size=10px>${cont}</font></strong>/<font size=3px>${NUMERO_RODADAS}</font>`
-    window.document.getElementById('dificuldade').innerHTML = `<strong>${dificuldade_cor}</strong>`
+    window.document.getElementById('dificuldade').innerHTML = `<strong>${localStorage.getItem("cor")}</strong>`
     window.document.getElementById('acertos').innerHTML = `Acertos: ${pontuacao}`
     window.document.getElementById('erros').innerHTML = `Erros: ${cont - pontuacao - 1}`
     resposta = cria_opcoes()
@@ -84,8 +78,6 @@ function inicia_jogo() {
 
 function cria_opcoes() {
 
-    limpar_paises()
-    let posicao_certa
     let colocou = false
     let opcao = Math.floor(Math.random() * aux_bandeiras.length);
     while (ja_saiu_bandeira(opcao)) {
@@ -94,13 +86,13 @@ function cria_opcoes() {
 
     paises_escolhidos.push(aux_bandeiras[opcao])
 
-    posicao_certa = Math.floor(Math.random() * 4);
-    n_sorteado[posicao_certa] = 1
+    let posicao_certa = Math.floor(Math.random() * 4);
+    n_sorteado[posicao_certa] = true
 
     let regionNames = new Intl.DisplayNames(['pt-BR'], { type: 'region' });  //o milagre acontece aqui :o
 
     botoes[posicao_certa].value = regionNames.of(aux_bandeiras[opcao].toUpperCase().replace('.PNG', ''))
-    bandeira.src = '../imagens/' + string_caminho + aux_bandeiras[opcao]
+    window.document.getElementById('bandeira').src = '../imagens/' + string_caminho + aux_bandeiras[opcao]
 
     let setadas = 1
     while (setadas < 4) {
@@ -138,11 +130,11 @@ function jogo() {
         botoes[1].style = 'display: none'
         botoes[2].style = 'display: none'
         botoes[3].style = 'display: none'
-        p2.style = 'display: block;'
-        p2.innerHTML = `<strong>FIM DE JOGO!</strong><br>Você acertou <strong>${pontuacao} de ${NUMERO_RODADAS}</strong> bandeiras <br> na dificuldade <strong>${dificuldade_cor}</strong>`
-        recomecar.style = 'display: block;'
-        bandeira.src = '../imagens/mapa.png'
-        bandeira.style = 'box-shadow: 0px 0px 0px white; background-color: transparent; margin: auto;'
+        window.document.getElementById('p2').style = 'display: block;'
+        window.document.getElementById('p2').innerHTML = `<strong>FIM DE JOGO!</strong><br>Você acertou <strong>${pontuacao} de ${NUMERO_RODADAS}</strong> bandeiras <br> na dificuldade <strong>${localStorage.getItem("cor")}</strong>`
+        window.document.getElementById('recomecar').style = 'display: block;'
+        window.document.getElementById('bandeira').src = '../imagens/mapa.png'
+        window.document.getElementById('bandeira').style = 'box-shadow: 0px 0px 0px white; background-color: transparent; margin: auto;'
         window.document.getElementById('res').style = 'display: none'
         window.document.getElementById('dificuldade').style = 'display: none'
         window.document.getElementById('p4').style = 'display: none'
@@ -153,22 +145,15 @@ function jogo() {
 }
 
 function limpar_usados() {
-    for (let i = 0; i < n_sorteado.length; i++) {
-        n_sorteado[i] = 0
-    }
-}
-
-function limpar_paises() {
-    for (let i = 0; i < paises_escolhidos.length; i++) {
-        paises_escolhidos[i] = ''
-    }
+    n_sorteado = []
+    paises_escolhidos = []
 }
 
 function ja_saiu_posicao(posicao) {
     if (n_sorteado[posicao]) {
         return true
     }
-    n_sorteado[posicao] = 1
+    n_sorteado[posicao] = true
     return false
 }
 
@@ -192,7 +177,7 @@ function ja_saiu_bandeira(bandeira) {
     return false
 }
 
-function getDificuldade() {
+function getDificuldade(dificuldade) {
     if (dificuldade == 'Fácil'){
         string_caminho = 'facil/'
         aux_bandeiras = bandeiras_facil

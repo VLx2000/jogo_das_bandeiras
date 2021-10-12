@@ -49,7 +49,7 @@ input {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.493);
 }
 
-@media screen and (max-device-width: 700px) {
+@media (max-width: 900px) {
     body{
         background-size: 400%;
         margin: 10px;
@@ -101,7 +101,7 @@ input {
     }
 }
 
-@media screen and (min-device-width: 700px) {
+@media (min-width: 901px) {
     body{
         background-size: 200%;
     }
@@ -224,6 +224,7 @@ input {
 .botao:hover, .botaod:hover {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 .bandeira {
